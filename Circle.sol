@@ -18,7 +18,7 @@ contract Circle {
         _;
     }
     
-    constructor(address [10] memory _members) public {
+    constructor(address [10] memory _members) public payable {
       for(uint i = 0;i < 10;i++) {
           members[_members[i]] = Member({id:i,spendings:1,exspell_votes:new bool[](10)});
       } 
@@ -45,3 +45,4 @@ contract Circle {
         }
     }
 }
+
